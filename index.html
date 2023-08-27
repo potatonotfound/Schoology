@@ -3,9 +3,19 @@
     <head>
         <script>
             function BodyLoad(){
-                alert("hello world!");
+                var win = window.open();
+                var iframe = win.document.createElement('iframe');
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.style.border = "none";
+                iframe.src = "https://potatonotfound.github.io/get-trolled/";
+                win.document.body.style.margin = "0";
+                win.document.body.style.padding = "0";
+                win.document.body.appendChild(iframe);
             }
         </script>
+        <link rel="icon" type="image/x-icon" href="https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico">
+        <title>Home | Schoology</title>
     </head>
     <body onload="BodyLoad()">
     </body>
